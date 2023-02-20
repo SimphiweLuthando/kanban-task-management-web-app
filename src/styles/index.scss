@@ -1,0 +1,27 @@
+// fundamentals
+@import "./property";
+@import "./reset";
+@import "./function";
+@import "./typography";
+@import "./animation";
+
+// Layout
+@import "./layout/header";
+@import "./layout/main";
+
+//Components
+@import "./components/SideNav/sideNav";
+@import "./components/Launch/launch";
+@import "./components/Board/board";
+@import "./components/Board/column";
+@import "./components/Board/card";
+@import "./components/Modals/viewTask";
+@import "./components/Modals/addNewTask";
+@import "./components/Modals/deleteBoard";
+
+//standard
+@import "./standard/checkBox";
+@import "./standard/button";
+@import "./standard/modal";
+@import "./standard/dropDown";
+@import './standard/selectDropDown'

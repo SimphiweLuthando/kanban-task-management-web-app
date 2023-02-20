@@ -1,0 +1,44 @@
+
+.Board {
+  position: absolute;
+  left:18.75rem;
+  display: flex;
+  min-width:100%;
+  height: 100%;
+  color: $white;
+  transition: left .2s ease;
+  padding: $margin-medium $margin-large;
+  cursor: move;
+
+  &--noItem {
+    display: grid;
+    place-content: center;
+    color: color(title);
+    left: 9.375rem;
+    cursor: default;
+  
+    &:hover {
+      color: color($darkBlue);
+    }
+
+    &__txt {
+      margin-bottom: $margin-small;
+      text-align: center;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+  
+      & > button {
+        max-width: fit-content;
+      }
+    }
+  }
+
+  &__full {
+    left: 0;
+  }
+}
+
+

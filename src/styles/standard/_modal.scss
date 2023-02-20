@@ -1,0 +1,50 @@
+
+
+.Overlay {
+  position: fixed;
+  display: flex;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: $overlay;
+  z-index:9;
+}
+
+.Modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  max-width: 30rem;
+  max-height: 100%;
+  border-radius: 10px;
+  background: color(main);
+  color: color(title);
+  padding: $margin-large;
+  animation: fadeIn .3s ease; 
+
+  @include mobile {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Modal--close {
+  display: none;
+  position: absolute;
+  top: .4rem;
+  right: .2rem;
+  border-radius: 4px;
+  padding: .15rem .35rem ;
+  background: rgb(8, 8, 8, 0.1);
+  @include mobile {
+    display:block;
+  }
+}

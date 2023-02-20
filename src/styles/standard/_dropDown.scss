@@ -1,0 +1,71 @@
+.DropDown {
+  z-index: 5;
+  display: flex;
+  position: relative;
+  height: fit-content;
+}
+
+
+.DropDown__wrapper {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 12rem;
+  background: color(board); 
+  padding: $margin-small;
+  border-radius: 8px;
+  animation: fadeIn .3s ease; 
+  @include boxShadow;
+
+  &--right {
+    left:-150%;
+  }
+  @include mobile {
+    &--right {
+      left:-450%;
+    }
+  }
+}
+
+.DropDown__text {
+  color: $mediumGray;
+  display: flex;
+  width: 100%;
+  transition: opacity .2s ease;
+
+  &--warning {
+    margin-top: $margin-tiny;
+    color: $red;
+  }
+
+  &:hover {
+    opacity: $hover;
+  }
+}
+
+.DropDown__button-ellipsis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: $margin-small;
+  position: relative;
+  min-width: 22px;
+  height: 38px;
+  border-radius: 10px;
+  opacity: 1;
+  color: $mediumGray;
+  transition: background-color .2s ease,color .2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: color(ellipsis);
+  }
+
+  @include mobile {
+    margin-left: $margin-tiny;
+    transform: scale(0.8);
+  }
+}

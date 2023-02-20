@@ -1,0 +1,82 @@
+
+.Column {
+  display: flex;
+  flex-direction: column;
+  margin-right: $margin-large;
+  width: 17.5rem;
+  height: 100%;
+  color: color(title);
+  user-select: none;
+}
+
+.Column__title {
+  display: flex;
+  align-items: center;
+  margin-bottom:$margin-medium;
+  font-size: $font-12;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: $mediumGray;
+}
+
+.Column__title-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: help;
+}
+
+.Column__title-ball {
+  display: flex;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 12px;
+
+  &--0 {
+    background: #49C4E5;
+  }
+  &--1 {
+    background: #8471F2;
+  }
+  &--2 {
+    background: #67E2AE;
+  }
+  &--3 {
+    background: #e5a449;
+  }
+  &--4 {
+    background: #2a3fdb;
+  }
+  &--5 {
+    background: #c36e6e;
+  }
+}
+
+.Column__container {
+  height: 100vh;
+
+  &--empty{
+    outline: 1px dashed $mediumGrayOpacity;
+    outline-width: 2px;
+    border-radius: 6px;
+  }
+}
+
+.Column__addNewButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-24;
+  font-weight: bold;
+  color: $mediumGray;
+  background: $mediumGrayGradient;
+  height: 100%;
+  border-radius: 6px;
+  transition: color .2s ease;
+
+  &:hover {
+    color:$darkBlue;
+  }
+}

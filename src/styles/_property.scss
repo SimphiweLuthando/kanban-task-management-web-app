@@ -1,0 +1,107 @@
+//space 
+$margin-tiny: .5rem;
+$margin-small: 1rem;
+$margin-medium: 1.5rem;   
+$margin-large: 2rem;  
+
+//opacity
+$hover: .6; 
+
+//font 
+$font-12: 0.75rem;
+$font-13: 0.8125rem;
+$font-15: 0.9375rem; 
+$font-18: 1.125rem; 
+$font-19: 1.1875rem;
+$font-23: 1.4375rem; 
+$font-24: clamp(1.2rem, 3vw, 1.5rem); 
+$font-30: 1.875rem; 
+
+//color 
+$black: #000000;
+$white: #ffffff;
+$red:#EA5555;
+$darkBlue: #635FC7;
+$veryLightBlue:#f0effa;
+$lightBlue: #A8A4FF;
+$lightGray: #F4F7FD;
+$lightGrayLine: #E4EBFA;
+$mediumGray: #828fa3;
+$darkGray: #2B2C37;
+$darkGrayLine: #3E3F4E;
+$veryDarkGray: #20212C;
+$cardShadow: rgba(54, 78, 126,0.101545);
+$overlay: rgba(0,0,0,0.5);
+$mediumGrayOpacity: rgba(130,143,163,0.4);
+$mediumGrayGradient: linear-gradient(to bottom, rgba(121, 132, 147, 0.2),rgba(130,143,163,0.1), rgba(130,143,163,0));
+$darkBlueOpacity: rgba(99, 95, 199,0.25);
+
+
+$light:(
+  bg: $lightGray,
+  scroll:$mediumGray,
+  borderLine:$lightGrayLine,
+  main: $white,
+  title: $black,
+  subTitle: $mediumGray,
+  board:$white,
+  themeSwitchBox: $lightGray,
+  addButton: $veryLightBlue,
+  ellipsis: $lightGrayLine,
+  checked: rgba(0,0,0,0.5),
+);
+
+$dark:(
+  bg:$veryDarkGray,
+  scroll:$darkGrayLine,
+  borderLine:$darkGrayLine,
+  main: $darkGray,
+  title: $white,
+  subTitle: $white,
+  board:$veryDarkGray,
+  themeSwitchBox: $veryDarkGray,
+  addButton: $white,
+  ellipsis: $veryDarkGray,
+  checked: rgba(255,255,255,0.5),
+  
+);
+
+
+//device width
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (max-width:#{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:#{$mobile-width}){
+    @content;
+  }
+}
+
+@mixin boxShadow {
+  border: 1px solid color(bg);
+  box-shadow: 0 0 8px $cardShadow;
+}
+
+@mixin inputStandard {
+  & input,
+  & textArea {
+    background: transparent;
+    color: color(title);
+    font-size: $font-13;
+    padding: $margin-tiny $margin-small;
+    border-radius: 4px;
+    border: 2px solid $mediumGrayOpacity;
+    transition: border .2s ease;
+    &:focus-visible {
+      border-color: $darkBlue;
+    }
+  }
+}
+

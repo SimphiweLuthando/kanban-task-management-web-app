@@ -1,0 +1,33 @@
+
+.Button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background: $darkBlue;
+  padding: .75rem $margin-small;
+  border-radius: 24px;
+  color: $white;
+  font-size: $font-15;
+  font-weight: bold;
+  transition: all .2s ease;
+
+  &--small {
+    font-size: $font-13;
+    padding:$margin-tiny $margin-small;
+  }
+
+  &--theme {
+    border-radius: 20px;
+    color:$darkBlue;
+    background: color(addButton);
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+
+  &:hover:not(&--theme, &--custom){
+    background: $lightBlue;
+  }
+}

@@ -1,0 +1,51 @@
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+ol, ul{
+  list-style: none;
+  padding: 0;
+}
+
+input,textarea {
+  border:0;
+  outline: 0;
+}
+
+button {
+  background: inherit;
+  border: 0;
+  outline: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #dd9951;
+  }
+}
+
+input[type="checkbox"] {
+  &:focus-visible {
+    outline: 2px solid #dd9951;
+  }
+}
+
